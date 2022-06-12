@@ -1,23 +1,20 @@
 package com.example.demo.domain;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
+@AllArgsConstructor
+@Data
+@Getter
+@Setter
 public class Anime implements Serializable {
+
+    private Long id;
     private String nome;
 
-    public Anime() {
-    }
-
-    public Anime(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 }
