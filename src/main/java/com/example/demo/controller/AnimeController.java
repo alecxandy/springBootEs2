@@ -38,4 +38,8 @@ public class AnimeController {
         return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
     }
 
+    @PostMapping(path = "")
+    public ResponseEntity<List<Anime>> save(@RequestBody Anime anime) {
+        return new ResponseEntity.created(animeService.save(anime));
+    }
 }

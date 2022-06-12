@@ -20,4 +20,9 @@ public class AnimeService {
     public List<Anime> findById(Long id) {
         return animeList;
     }
+
+    public List<Anime> save(Anime anime) {
+        animeList.add(anime);
+        return animeList;
+    }
 }
